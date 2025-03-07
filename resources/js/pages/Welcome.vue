@@ -2,7 +2,26 @@
 import { Head, Link } from '@inertiajs/vue3';
 import AppLogoIcon from '../components/AppLogoIcon.vue';
 import { Mail, Phone, MapPin } from 'lucide-vue-next';
-
+const services = [
+    {
+        id: 'event-sound',
+        title: 'Event Sound Systems',
+        description: 'High-quality PA systems for corporate events, concerts, and private parties.',
+        image: '/pictures/event-sound.jpg'
+    },
+    {
+        id: 'microphone-speaker',
+        title: 'Microphone & Speaker Rentals',
+        description: 'Reliable microphones, speakers, and mixers for clear and professional sound.',
+        image: '/pictures/microphone-speaker.jpg'
+    },
+    {
+        id: 'technical-support',
+        title: 'Technical Support & Setup',
+        description: 'Our expert technicians ensure a seamless audio experience for your event.',
+        image: '/pictures/technical-support.jpg'
+    }
+];
 </script>
 
 <template>
@@ -11,7 +30,7 @@ import { Mail, Phone, MapPin } from 'lucide-vue-next';
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     </Head>
 
-    <div class="relative flex min-h-screen flex-col items-center bg-[#FDFDFC]  text-[#1b1b18] dark:bg-[#0a0a0a] lg:justify-center ">
+    <div class="relative px-2 flex min-h-screen flex-col items-center bg-[#FDFDFC]  text-[#1b1b18] dark:bg-[#0a0a0a] lg:justify-center ">
         <video autoplay loop muted class="absolute inset-0 hidden w-screen h-screen object-cover lg:block">
                 <source src="/videos/pa-system.mp4" type="video/mp4" />
             </video>
@@ -66,34 +85,46 @@ import { Mail, Phone, MapPin } from 'lucide-vue-next';
             <p class="my-2">Royal Sounds is poised to capitalize on the growing demand for professional audio services in Harare. We are confident that our commitment to quality, service, and affordability will establish us as the preferred choice for PA system rentals, making every event sound exceptional.</p>
         </div>
 
-        <div id="services" class="relative z-10  bg-fixed bg-center text-white bg-cover py-4" style="background-image: url('/pictures/header.jpg');">
-            <div class="max-w-5xl mx-auto px-6">
+        <div id="services" class="relative z-10 bg-fixed bg-center text-white bg-cover py-4" style="background-image: url('/pictures/header.jpg');">
+            <div class=" max-w-5xl mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-6">Our Services</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-bold">Event Sound Systems</h3>
-                        <p class="mt-2">High-quality PA systems for corporate events, concerts, and private parties.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+                    <div class="w-full max-w-5xl  bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <a href="#">
+                            <img class="rounded-t-lg" src="/pictures/service1.jpg" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5 pt-2">
+                            <a href="#">
+                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 ">Event Sound Systems</h5>
+                            </a>
+                            <p class="tracking-tight text-gray-900 py-3 ">High-quality PA systems for corporate events, concerts, and private parties.</p>
+                        </div>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-bold">Microphone & Speaker Rentals</h3>
-                        <p class="mt-2">Reliable microphones, speakers, and mixers for clear and professional sound.</p>
+                    <div class="w-full   max-w-5xl bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <a href="#">
+                            <img class="rounded-t-lg" src="/pictures/service2.jpg" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5 pt-2">
+                            <a href="#">
+                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 ">Event Sound Systems</h5>
+                            </a>
+                            <p class="tracking-tight text-gray-900 py-3">Reliable microphones, speakers, and mixers for clear and professional sound</p>
+                        </div>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-bold">Technical Support & Setup</h3>
-                        <p class="mt-2">Our expert technicians ensure a seamless audio experience for your event.</p>
+                    <div class="w-full  max-w-5xl bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <a href="#">
+                            <img class=" rounded-t-lg" src="/pictures/service3.jpg" alt="product image" />
+                        </a>
+                        <div class="px-5 pb-5 pt-2">
+                            <a href="#">
+                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 ">Technical Support & Setup</h5>
+                            </a>
+                            <p class="tracking-tight text-gray-900 py-3">Our expert technicians ensure a seamless audio experience for your event.</p>
+                        </div>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-bold">Wedding & Private Event Packages</h3>
-                        <p class="mt-2">Tailored sound solutions for weddings, birthdays, and other special occasions.</p>
-                    </div>
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-bold">Corporate Conference Solutions</h3>
-                        <p class="mt-2">Clear and professional audio setups for meetings, conferences, and workshops.</p>
-                    </div>
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-bold">Live Band & DJ Equipment</h3>
-                        <p class="mt-2">High-end sound gear for live performances, DJ sets, and music events.</p>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -105,7 +136,7 @@ import { Mail, Phone, MapPin } from 'lucide-vue-next';
                 <p class="text-center mb-8">Affordable and flexible pricing plans for all event sizes.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="bg-white p-6 rounded-lg shadow-md">
-                        <img src="/pictures/config1.png" alt="Sound SE" class="w-full h-50 object-cover rounded-md mb-4" />
+                        <img src="/pictures/config1.jpg" alt="Sound SE" class="w-full h-50 object-cover rounded-md mb-4" />
                         <h3 class="text-xl font-bold">Sound SE</h3>
                         <ul class="mt-2 text-sm">
                             <li>✅ Up to 2 Top Speakers</li>
@@ -113,7 +144,7 @@ import { Mail, Phone, MapPin } from 'lucide-vue-next';
                             <li>✅ Mixer</li>
                             <li>✅ Suitable for small events (up to 200 people)</li>
                         </ul>
-                        <p class="mt-2 text-lg font-semibold">$70 / day</p>
+                        <p class="mt-2 text-lg font-semibold">$100 / day</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <img src="/pictures/config2.jpg" alt="Sound SE" class="w-full h-50 object-cover rounded-md mb-4" />
@@ -125,7 +156,7 @@ import { Mail, Phone, MapPin } from 'lucide-vue-next';
                             <li>✅ Mixer & Amplifier</li>
                             <li>✅ Suitable for small to medium events (up to 200 people)</li>
                         </ul>
-                        <p class="mt-2 text-lg font-semibold">$100 / day</p>
+                        <p class="mt-2 text-lg font-semibold">$150 / day</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <img src="/pictures/config3.jpg" alt="Sound SE" class="w-full h-50 object-cover rounded-md mb-4" />
@@ -137,7 +168,7 @@ import { Mail, Phone, MapPin } from 'lucide-vue-next';
                             <li>✅ Mixer & Amplifier</li>
                             <li>✅ Suitable for weddings, parties, and events (200+ people)</li>
                         </ul>
-                        <p class="mt-2 text-lg font-semibold">$150 / day</p>
+                        <p class="mt-2 text-lg font-semibold">$200 / day</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <img src="/pictures/config4.jpg" alt="Sound SE" class="w-full h-50 object-cover rounded-md mb-4" />
@@ -149,12 +180,11 @@ import { Mail, Phone, MapPin } from 'lucide-vue-next';
                             <li>✅ Mixer & Amplifier</li>
                             <li>✅ Suitable for large events, church services, and concerts (200+ people)</li>
                         </ul>
-                        <p class="mt-2 text-lg font-semibold">$200 / day</p>
+                        <p class="mt-2 text-lg font-semibold">$300 / day</p>
                     </div>
                 </div>
             </div>
         </div>
-        add a picture sample of the system on each price tier
 
         <div id="quote" class="relative z-10 py-16 text-white w-full">
             <div class="max-w-xl mx-auto px-6">
@@ -167,8 +197,8 @@ import { Mail, Phone, MapPin } from 'lucide-vue-next';
                             <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 p-2" />
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700">Email</label>
-                            <input type="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 p-2" />
+                            <label class="block text-sm font-medium text-gray-700">WhatsApp Number</label>
+                            <input type="number" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 p-2" />
                         </div>
                     </div>
                     <div class="mt-4">
@@ -186,18 +216,10 @@ import { Mail, Phone, MapPin } from 'lucide-vue-next';
                         <input type="date" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 p-2" />
                     </div>
                     <div class="mt-4">
-                        <label class="block text-sm font-medium text-gray-700">Event Location</label>
-                        <select class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 p-2">
-                            <option>CBD (0km)</option>
-                            <option>Borrowdale (12km)</option>
-                            <option>Avondale (5km)</option>
-                            <option>Chisipite (10km)</option>
-                            <option>Mt Pleasant (7km)</option>
-                            <option>Waterfalls (8km)</option>
-                            <option>Highlands (6km)</option>
-                            <option>Greendale (9km)</option>
-                            <option>Glen Lorne (15km)</option>
-                        </select>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Location</label>
+                            <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-opacity-50 p-2" />
+                        </div>
                     </div>
                     <div class="mt-4">
                         <label class="block text-sm font-medium text-gray-700">Additional Requirements</label>
